@@ -13,9 +13,20 @@ class Rethrow {
                 System.out.println("Can't divide by zero");
             }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("Out of array boundayr");
+                System.out.println("Out of array boundary");
                 throw e;
             }
+        }
+    }
+}
+
+class RethrowDemo {
+    public static void main(String args[]) {
+        try {
+            Rethrow.getException();
+        }
+        catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("System got terminated");
         }
     }
 }
